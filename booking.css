@@ -1,0 +1,181 @@
+
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #fdeef2;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    padding: 1px;
+    background-color: white;
+}
+
+nav ul {
+    display: flex;
+    justify-content: right;
+    gap: 12px;
+    margin-right: 90px;
+    padding: 10px 0;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+    font-size: 16px;
+}
+
+.lang-link {
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#google_translate_element {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 9999;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+
+fieldset {
+    margin: 100px auto 0;
+    width: 900px;
+    max-width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: 2px solid brown;
+    text-align: center;
+    background-color: rgb(248, 185, 244);
+    padding: 30px 20px;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 16px;
+    border-radius: 15px;
+    border: 2px solid brown;
+    width: 310px;
+    max-width: 90%;
+}
+
+select {
+    margin-bottom: 20px;
+    padding: 7px;
+    border-radius: 13px;
+    border: 1px solid brown;
+    width: 200px;
+    max-width: 90%;
+}
+
+.primary-btn {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    background-color: rgb(128, 0, 81);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-btn:hover {
+    background-color: rgb(202, 3, 129);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(226, 43, 195);
+    color: white;
+    font-weight: bold;
+    margin-top: 80px;
+}
+
+/* RESPONSIVENESS */
+
+/* ---------- Tablets (≤ 900px) ---------- */
+@media screen and (max-width: 900px) {
+    nav ul {
+        margin-right: 20px;
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    fieldset {
+        width: 80%;
+        padding: 25px;
+    }
+}
+
+/* ---------- Mobile Screens (≤ 600px) ---------- */
+@media screen and (max-width: 260px) {
+
+    /* Navigation becomes centered */
+    nav ul {
+        justify-content: center;
+        margin-right: 0;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    fieldset {
+        width: 95%;
+        padding: 20px;
+        margin-top: 50px;
+    }
+
+    input {
+        width: 90%;
+        padding: 14px;
+    }
+
+    select {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .primary-btn {
+        width: 70%;
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+/* ---------- Extra Small Mobile (≤ 400px) ---------- */
+@media screen and (max-width: 300px) {
+
+    nav a {
+        font-size: 12px;
+    }
+
+    input {
+        padding: 12px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .primary-btn {
+        width: 90%;
+        padding: 10px;
+    }
+}

@@ -1,0 +1,189 @@
+body {
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    background: #fdeef2;
+    margin: 0;
+    padding: 0;
+}
+
+
+nav {
+    padding: 10px 20px;
+    background-color: rgb(226, 43, 195);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+.lang-link {
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+#google_translate_element {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 9999;
+    background: white;
+    padding: 8px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+
+.center-text {
+    text-align: center;
+    font-weight: bolder;
+}
+
+.qs-dec {
+    background-color: rgb(221, 177, 205);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+fieldset {
+    margin: 20px auto;
+    width: 600px;
+    max-width: 90%;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    border: none;
+    background-color: white;
+}
+
+.sub-btn {
+    display: block;
+    width: 150px;
+    padding: 12px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(226, 43, 195);
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    margin: 40px auto 0;
+    cursor: pointer;
+    text-align: center;
+}
+
+.sub-btn:hover {
+    background-color: rgb(202, 3, 129);
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: rgb(226, 43, 195);
+    color: white;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+/* -----------------------------------
+   RESPONSIVENESS
+----------------------------------- */
+
+/* ---------- Tablets (≤ 900px) ---------- */
+@media screen and (max-width: 800px) {
+    nav ul { 
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+
+    fieldset {
+        width: 80%;
+    }
+
+    .sub-btn {
+        width: 130px;
+    }
+}
+
+/* ---------- Mobile (≤ 600px) ---------- */
+@media screen and (max-width: 500px) {
+
+    /* Nav becomes stacked */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    /* Fieldset fully responsive */
+    fieldset {
+        width: 91%;
+        padding: 15px;
+    }
+
+    .qs-dec {
+        height: auto;
+        padding: 20px;
+    }
+
+    .sub-btn {
+        width: 120px;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+}
+
+/* ---------- Extra Small Mobile (≤ 400px) ---------- */
+@media screen and (max-width: 300px) {
+    nav a {
+        font-size: 13px;
+    }
+
+    .sub-btn {
+        width: 110px;
+        padding: 8px;
+    }
+
+    fieldset {
+        padding: 10px;
+    }
+}

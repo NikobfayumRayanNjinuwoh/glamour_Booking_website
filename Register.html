@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+ <nav>
+    <h2><img src="iage.png">Glamour</h2>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+    </ul>
+      <a href="#" id="lang-link" class="lang-link" title="Change language">🌐</a>
+  
+  <div id="google_translate_element"></div>
+  </nav>
+  <h2 class="center-text" >Welcome to glamour registration page</h2>
+  <p class="center-text">Please fill in the resgistration form to get your shop listed on the website</p>
+   <fieldset>
+    <div class="qs-dec">
+    <h4>hellow</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+</div>
+
+    <div class="qs-dec">
+      <h4>hellow</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+</div>
+
+    <div class="qs-dec">
+      <h4>hellow</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+</div>
+
+    <div class="qs-dec">
+      <h4>hellow</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+    <h4><input type="checkbox" name="" id="">12</h4>
+</div>
+
+    <div class="qs-dec">
+    <h4>hellow</h4>
+    <input type="text">
+</div>
+
+    <div class="qs-dec">
+     <h4>hellow</h4>
+    <input type="text">
+</div>
+
+    <div class="qs-dec">
+     <h4>hellow</h4>
+    <input type="text">
+</div>
+<button type="submit" class="sub-btn">Sumbit</button>
+   </fieldset>
+   <footer>
+    © 2025 GlamourBook. All rights reserved
+   </footer>
+
+   <script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,ar',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("lang-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    const box = document.getElementById("google_translate_element");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

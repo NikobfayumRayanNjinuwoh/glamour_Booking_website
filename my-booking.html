@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Bookings - GlamourBook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="my-booking.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="nav-left">
+     <h2><img src="iage.png">Glamour</h2>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+    </div>
+        <a href="#" id="lang-link" class="lang-link" title="Change language">🌐</a>
+  
+  <div id="google_translate_element"></div>
+</nav>
+
+<section class="header-section">
+    <h1>My Bookings</h1>
+    <p>Track your appointments and confirm completed services.</p>
+</section>
+
+<section class="search-container">
+    <div class="search-box">
+        <label>Enter your email to find bookings</label>
+        
+        <div class="search-row">
+            <input type="email" id="emailInput" placeholder="jane@example.com">
+            <button id="findBtn">
+                <i class="icon search"></i>
+                Find<br>Bookings
+            </button>
+        </div>
+    </div>
+</section>
+
+<script src="my-bookings.js"></script>
+<script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,ar',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("lang-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    const box = document.getElementById("google_translate_element");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>

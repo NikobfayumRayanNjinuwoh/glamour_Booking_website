@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Make a Booking — Glow & Co.</title>
+  <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+        <h2><img src="iage.png">Glamour</h2>
+        <ul>
+      <a href="index.html">Home</a>
+      <a href="index.html">Service</a>
+      </ul>
+        <a href="#" id="lang-link" class="lang-link" title="Change language">🌐</a>
+  
+  <div id="google_translate_element"></div>
+    </nav>
+  </header>
+
+  <main class="booking-main">
+    <fieldset>
+    <form id="bookingForm" class="booking-card">
+      <h2>Book Service</h2>
+
+      <label>Name</label>
+      <input id="custName" required />
+      <label>Email</label>
+      <input id="custEmail" type="email" required />
+<br>
+      <label>Phone</label>
+      <input id="custPhone" required />
+<br>
+      <label>Select service</label>
+      <select id="serviceSelect" required>
+        <option value="1">Select</option>
+        <option value="1">Nails</option>
+        <option value="1">Makeup</option>
+        <option value="1">Masagges</option>
+      </select>
+
+      <div class="two-cols">
+        <div>
+          <label>Date</label>
+          <input id="bookDate" type="date" required />
+        </div>
+        <div>
+          <label>Time</label>
+          <input id="bookTime" type="time" required />
+        </div>
+      </div>
+
+      <button type="submit" class="primary-btn">Request Booking</button>
+      <small class="muted">You will be notified when the shop/admin responds.</small>
+    </form>
+</fieldset>
+    <aside class="booking-info">
+      <h4>How it works</h4>
+      <ol>
+        <li>Pick a service and preferred date/time.</li>
+        <li>Your booking goes to the admin/shop for approval.</li>
+        <li>When approved you'll get a notification & message.</li>
+      </ol>
+    </aside>
+  </main>
+  <footer>
+      <p>© 2025 GlamourBook. All rights reserved.</p>
+  </footer>
+
+  <script src="customer.js"></script>
+
+  <script>
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement(
+    {
+      pageLanguage: 'en',
+      includedLanguages: 'en,fr,ar',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    },
+    'google_translate_element'
+  );
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.getElementById("lang-link").addEventListener("click", function (e) {
+    e.preventDefault();
+    const box = document.getElementById("google_translate_element");
+    box.style.display = box.style.display === "block" ? "none" : "block";
+  });
+});
+</script>
+
+<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
